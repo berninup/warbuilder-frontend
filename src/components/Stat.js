@@ -1,56 +1,50 @@
-import d4 from "../images/d4.png"
-import d6 from "../images/d6.png"
-import d8 from "../images/d8.png"
-import d10 from "../images/d10.png"
-import d12 from "../images/d12.png"
-import one from "../images/number-one.png"
-import two from "../images/number-2.png"
-import three from "../images/number-3.png"
+
 
 function Stat({ attribute, statSize }) {
   let statStyle = {};
   switch (attribute) {
     case "attack":
       statStyle = {
-        position: "left",        
+        gridArea: "2 / 1 / 3 / 2"       
       };
       break;
     case "defense":
       statStyle = {
-        position: "right",
+        gridArea: "2 / 3 / 3 / 4"
       };
       break;
     case "mAttack":
       statStyle = {
-        position: "left",
+        gridArea: "3 / 1 / 4 / 2"
       };
       break;
     case "mDefense":
       statStyle = {
-        position: "right",
+        gridArea: "3 / 3 / 4 / 4"
       };
       break;
       case "movement":
       statStyle = {
-        position: "left",
+        gridArea: "5 / 1 / 6 / 2"
       };
       break;
       case "hp":
       statStyle = {
-        position: "center",
+        gridArea: "5 / 2 / 6 / 3"
       };
       break;
       case "range":
       statStyle = {
-        position: "right",
+        gridArea: "5 / 3 / 6 / 4"
       };
       break;
     default:
       statStyle = {};
   }
 
-  return <div >
-    <img style={statStyle} src={statSize} alt="stat"/>
+  return <div style={statStyle}>
+    <h6>{attribute}</h6>
+    <img style={{width: "50px"}}src={statSize} alt="stat"/>
   </div>;
 }
 

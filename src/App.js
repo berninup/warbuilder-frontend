@@ -4,7 +4,7 @@ import { loadUnitList } from './services/api';
 
 function App() {
 
-
+loadUnitList()
   return (
     <div className="App">
       <h1>War Builder</h1>
